@@ -6,6 +6,7 @@
     <title>PKN Project</title>
     <link rel="stylesheet" href="stylelamankelas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -29,57 +30,56 @@
         <section class="hero-section">
             <div class="section-content">
                 <ul>          
-              <li>  <div class="judul">
-                            <h1 >
-                                Matematika
-                            </h1>
-                        </div></li>
+              <li> 
+                
+                    </li>
                             
-                                <li>
-                    <div class="menu-kelas1">
-                        <button class="menu-button1">&emsp;&emsp;Kelas 1</button>
-                         <div class="isi-menu-kelas1">
-                            <a href="#Materi"> Materi 1 </a>
-                            
+                    <li>
+        <div class="menu-kelas1">
+            <button class="menu-button1">&emsp;&emsp;Kelas 1 <i class="bx bxs-chevron-down"></i></button>
+             <div class="isi-menu-kelas1">
+                <a href="#Materi"> Materi 1 </a>
+                
+            </div>
+            </div></li>
+            <li>
+            <div class="menu-kelas2">
+                <button class="menu-button2">&emsp;&emsp;Kelas 2 <i class="bx bxs-chevron-down"></i></button>
+                 <div class="isi-menu-kelas2">
+                    <ul>
+                   <li> <a href="#Materi"> Materi 2</a> </li>
+                   <li> <a href="#Materi"> Materi 2.1</a> </li>
+                </ul>
+                </div>
+                </div></li>
+                <li class="menu-kelas3">
+                    <button class="menu-button3">&emsp;&emsp;Kelas 3 <i class="bx bxs-chevron-down"></i> </button>
+                     <div class="isi-menu-kelas3">
+                        <a href="#Materi"> Materi 3 </a>
+                    </div>
+                    </li>                       
+                    <li class="menu-kelas4">
+                        <button class="menu-button4">&emsp;&emsp;Kelas 4 <i class="bx bxs-chevron-down"></i></button>
+                         <div class="isi-menu-kelas4">
+                            <a href="#Materi"> Materi 4 </a>
                         </div>
-                        </div></li>
-                        <li>
-                        <div class="menu-kelas2">
-                            <button class="menu-button2">&emsp;&emsp;Kelas 2</button>
-                             <div class="isi-menu-kelas2">
-                                <ul>
-                               <li> <a href="#Materi"> Materi 2</a> </li>
-                               <li> <a href="#Materi"> Materi 2.1</a> </li>
-                            </ul>
+                        </li>  
+                        <li class="menu-kelas5">
+                            <button class="menu-button5">&emsp;&emsp;Kelas 5 <i class="bx bxs-chevron-down"></i></button>
+                             <div class="isi-menu-kelas5">
+                                <a href="#Materi"> Materi 5 </a>
                             </div>
-                            </div></li>
-                            <li class="menu-kelas3">
-                                <button class="menu-button3">&emsp;&emsp;Kelas 3</button>
-                                 <div class="isi-menu-kelas3">
-                                    <a href="#Materi"> Materi 3 </a>
+                            </li> 
+                            <li class="menu-kelas6">
+                                <button class="menu-button6">&emsp;&emsp;Kelas 6 <i class="bx bxs-chevron-down"></i></button>
+                                 <div class="isi-menu-kelas6">
+                                    <a href="#Materi"> Materi 6 </a>
                                 </div>
-                                </li>                       
-                                <li class="menu-kelas4">
-                                    <button class="menu-button4">&emsp;&emsp;Kelas 4</button>
-                                     <div class="isi-menu-kelas4">
-                                        <a href="#Materi"> Materi 4 </a>
-                                    </div>
-                                    </li>  
-                                    <li class="menu-kelas5">
-                                        <button class="menu-button5">&emsp;&emsp;Kelas 5</button>
-                                         <div class="isi-menu-kelas5">
-                                            <a href="#Materi"> Materi 5 </a>
-                                        </div>
-                                        </li> 
-                                        <li class="menu-kelas6">
-                                            <button class="menu-button6">&emsp;&emsp;Kelas 6</button>
-                                             <div class="isi-menu-kelas6">
-                                                <a href="#Materi"> Materi 6 </a>
-                                            </div>
-                                            </li> 
-                                            <li class="batas-bawah">
-                                            </li> 
+                                </li> 
+                                <li class="batas-bawah">
+                                </li> 
 
+                    </div>
                             </ul>
                     </div>
 
@@ -123,49 +123,18 @@ menuOpenButton.addEventListener("click", () => {
 });
 
 menuCloseButton.addEventListener("click", () => menuOpenButton.click());
-    </script>
 
-  <script>
-    document.querySelector('.menu-button1').addEventListener('click', function () {
-      const dropdownContent = document.querySelector('.isi-menu-kelas1');
-      dropdownContent.style.display =
-        dropdownContent.style.display === 'block' ? 'none' : 'block';
-    });
-  </script>
-    <script>
-        document.querySelector('.menu-button2').addEventListener('click', function () {
-          const dropdownContent = document.querySelector('.isi-menu-kelas2');
-          dropdownContent.style.display =
+document.querySelectorAll('.menu-button1, .menu-button2, .menu-button3, .menu-button4, .menu-button5, .menu-button6').forEach(button => {
+    button.addEventListener('click', function () {
+        const dropdownContent = this.nextElementSibling; // Find the corresponding dropdown content
+        dropdownContent.style.display =
             dropdownContent.style.display === 'block' ? 'none' : 'block';
-        });
-      </script>
-        <script>
-            document.querySelector('.menu-button3').addEventListener('click', function () {
-              const dropdownContent = document.querySelector('.isi-menu-kelas3');
-              dropdownContent.style.display =
-                dropdownContent.style.display === 'block' ? 'none' : 'block';
-            });
-          </script>
-        <script>
-            document.querySelector('.menu-button4').addEventListener('click', function () {
-              const dropdownContent = document.querySelector('.isi-menu-kelas4');
-              dropdownContent.style.display =
-                dropdownContent.style.display === 'block' ? 'none' : 'block';
-            });
-          </script>          
-        <script>
-            document.querySelector('.menu-button5').addEventListener('click', function () {
-              const dropdownContent = document.querySelector('.isi-menu-kelas5');
-              dropdownContent.style.display =
-                dropdownContent.style.display === 'block' ? 'none' : 'block';
-            });
-          </script> 
-        <script>
-            document.querySelector('.menu-button6').addEventListener('click', function () {
-              const dropdownContent = document.querySelector('.isi-menu-kelas6');
-              dropdownContent.style.display =
-                dropdownContent.style.display === 'block' ? 'none' : 'block';
-            });
-          </script> 
+
+        const chevronIcon = this.querySelector('.bx'); // Find the chevron icon inside the button
+        chevronIcon.classList.toggle('rotate'); // Toggle the rotate class
+    });
+});
+</script>
+
 </body>
 </html>
