@@ -38,6 +38,9 @@
 
 ul {
     list-style: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -113,9 +116,10 @@ header .navbar {
 }
 
 .hero-section .section-content {
+    position: relative;
+    top: 10vh;
     display: flex;
     align-items: center;
-    min-height: 100vh;
     justify-content: space-between;
 }
 
@@ -247,33 +251,40 @@ header .navbar {
 /* main*/
 /* kelas 1*/
 .menu-kelas1 {
-  position: relative;
-  display: inline-block;
-  width: 100vh;
-  height: 6vh;
-  border-style: solid;
-  border-right: #fff;
-  border-left: #fff;
-  border-bottom: #fff;
+  position: sticky;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
 }
 
 /* Button styling */
 .menu-button1 {
-  color: black;
-  width: 100vh;
-  height: 6vh;
-  font-size: 20px;
-  border: none;
+  width: 100%; /* Make button full width */
+  text-align: left; /* Align text to the left */
+  font-size: 20px; /* Font size for button text */
   cursor: pointer;
-  text-align: left;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
 }
 
 
 .isi-menu-kelas1{
-  display: none;
-color: black;
-padding: 5px 10vh;
+  position:relative; /* Absolute to avoid affecting layout */
 
+  top: 100%; /* Position below the button */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+}
+.isi-menu-kelas1 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
 }
 .isi-menu-kelas1 a:hover{
   background-color: #eee;
@@ -283,31 +294,36 @@ padding: 5px 10vh;
 /* kelas 2*/
 .menu-kelas2 {
   position: relative;
-  display: inline-block;
-  width: 100vh;
-  height: 6vh;
-  border-style: solid;
-  border-right: #fff;
-  border-left: #fff;
-  border-bottom: #fff;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
 }
 
 /* Button styling */
 .menu-button2 {
-  color: black;
-  width: 100vh;
-  height: 6vh;
-  font-size: 20px;
-  border: none;
+  width: 100%; /* Make button full width */
+  text-align: left; /* Align text to the left */
+  font-size: 20px; /* Font size for button text */
   cursor: pointer;
-  text-align: left;
-}
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;}
 
 .isi-menu-kelas2{
-  display: none;
-color: black;
-padding: 5px 10vh;
-
+  position: relative; /* Absolute to avoid affecting layout */
+  top: 100%; /* Position below the button */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+}
+.isi-menu-kelas2 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
 }
 
 .isi-menu-kelas2 a:hover{
@@ -318,32 +334,39 @@ background-color: #eee;
 /* kelas 3*/
 .menu-kelas3 {
   position: relative;
-  display: inline-block;
-  width: 100vh;
-  height: 6vh;
-  border-style: solid;
-  border-right: #fff;
-  border-left: #fff;
-  border-bottom: #fff;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
 }
 
 /* Button styling */
 .menu-button3 {
-  color: black;
-  width: 100vh;
-  height: 6vh;
-  font-size: 20px;
-  border: none;
+  width: 100%; /* Make button full width */
+  text-align: left; /* Align text to the left */
+  font-size: 20px; /* Font size for button text */
   cursor: pointer;
-  text-align: left;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  
 }
 
 .isi-menu-kelas3{
-display: none;
-color: black;
-padding: 5px 10vh;
+  position: relative; /* Absolute to avoid affecting layout */
+  top: 100%; /* Position below the button */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
 }
-
+.isi-menu-kelas3 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+}
 .isi-menu-kelas3 a:hover{
   background-color: #eee;
   }
@@ -351,31 +374,38 @@ padding: 5px 10vh;
 /*kelas 4*/
 .menu-kelas4 {
   position: relative;
-  display: inline-block;
-  width: 100vh;
-  height: 6vh;
-  border-style: solid;
-  border-right: #fff;
-  border-left: #fff;
-  border-bottom: #fff;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
 }
 
 /* Button styling */
 .menu-button4 {
-  color: black;
-  width: 100vh;
-  height: 6vh;
-  font-size: 20px;
-  border: none;
+  width: 100%; /* Make button full width */
+  text-align: left; /* Align text to the left */
+  font-size: 20px; /* Font size for button text */
   cursor: pointer;
-  text-align: left;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
 }
 
 .isi-menu-kelas4{
-display: none;
-color: black;
-padding: 5px 10vh;
+  position: relative; /* Absolute to avoid affecting layout */
+  top: 100%; /* Position below the button */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
 
+}
+.isi-menu-kelas4 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
 }
 .isi-menu-kelas4 a:hover{
   background-color: #eee;
@@ -384,31 +414,39 @@ padding: 5px 10vh;
   /*kelas 5*/
 .menu-kelas5 {
   position: relative;
-  display: inline-block;
-  width: 100vh;
-  height: 6vh;
-  border-style: solid;
-  border-right: #fff;
-  border-left: #fff;
-  border-bottom: #fff;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
 }
 
 /* Button styling */
 .menu-button5 {
-  color: black;
-  width: 100vh;
-  height: 6vh;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
+  width: 100%; /* Make button full width */
   text-align: left;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
 }
 
 .isi-menu-kelas5{
-display: none;
-color: black;
-padding: 5px 10vh;
+  position: relative; /* Absolute to avoid affecting layout */
+  top: 100%; /* Position below the button */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
 
+}
+
+.isi-menu-kelas5 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
 }
 .isi-menu-kelas5 a:hover{
   background-color: #eee;
@@ -417,55 +455,67 @@ padding: 5px 10vh;
   /*kelas 6*/
 .menu-kelas6 {
   position: relative;
-  display: inline-block;
-  width: 100vh;
-  height: 6vh;
-  border-style: solid;
-  border-right: #fff;
-  border-left: #fff;
-  border-bottom: #fff;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
 
 }
 
 /* Button styling */
 .menu-button6 {
-  color: black;
-  width: 100vh;
-  height: 6vh;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
+  width: 100%; /* Make button full width */
   text-align: left;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
 }
 
 .isi-menu-kelas6{
-display: none;
-color: black;
-padding: 5px 10vh;
+  max-height: 500px; /* Initially collapsed */
+  transition: max-height 0.4s ease; /* Smooth expansion */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);}
+
+.isi-menu-kelas6 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
 }
+
 .isi-menu-kelas6 a:hover{
   background-color: #eee;
   }
 
-  /* batas bawah untuk menu kelas*/
+  /* garis batas bawah untuk menu kelas*/
   .batas-bawah {
     position: relative;
     display: inline-block;
     width: 100vh;
     height: 6vh;
-    border-style: solid;
-    border-right: #fff;
-    border-left: #fff;
-    border-bottom: #fff;
+
   
   }
 
   .judul{
-    position: absolute;
+      position: absolute;
     top: 10vh;
     left: 5vh;
   padding: 50px;
-
-
-
   }
+
+  .rotate {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+  }
+
+
+  
+  .icontoggle i {
+    transition: transform 0.3s ease;
+  }
+
