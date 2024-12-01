@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --white-color: #fff;
+    --dark-color: #252525;
+    --light-blue: #BFECFF;
+    --light-purple: #CDC1FF;
+    --skintone: #FFF6E3;
+    --light-pink: #FFCCEA;
+    --blue: #1865f2;
+    --dark-purple : #3B1E54;
+
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.15rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --border-radius-s: 10px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    --site-max-width: 1300px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 50px;
+    max-width: var(--site-max-width);
+}
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    font-size: var(--font-size-xl);
+}
+
+.section-desc {
+    text-align: justify;
+}
+
+/*Header*/
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    border-bottom: solid;
+    border-color: var(--light-purple);
+    background: var(--white-color);
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text{
+    color: var(--dark-color);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    margin-left: 30px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 20px;
+    color: var(--blue);
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.4s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: var(--blue);
+    background: var(--light-purple);
+}
+
+/*Hero Section*/
+.hero-section {
+    padding-top: 70px;
+    min-height: 400px;
+    background: var(--white-color);
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.hero-section .hero-details .title {
+    font-size: var(--font-size-l);
+    color: var(--dark-purple);
+    font-family: "Miniver", sans-serif;
+}
+
+.hero-section .hero-details .description {
+    max-width: 70%;
+    margin: 25px 0 40px;
+    color: var(--dark-purple);
+    font-size: var(--font-size-m);
+    text-align: justify;
+}
+
+.hero-section .hero-image {
+    max-width: 500px;
+    margin-right: 300px;
+}
+
+.hero-section .icon {
+    border-radius: var(--border-radius-circle);
+}
+
+.navbar #open-menu,
+.navbar #close-menu {
+    display: none;
+}
+
+.grade-selector {
+    max-width: 300px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-left: -40px;
+}
+
+.grade-content {
+    position: relative;
+}
+
+.content-selection {
+    display: block;
+    background-color: var(--blue);
+    color: var(--dark-color);
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.grade-list {
+    display: none;
+    margin-top: 10px;
+    border: 1px solid;
+    border-color: var(--blue);
+    padding: 5px;
+}
+
+.grade-list li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: var(--blue);
+    cursor: pointer;
+    text-align: left; 
+}
+
+.submenu {
+    display: none;
+    margin-left: 15px;
+    padding-left: 10px;
+}
+
+.submenu li {
+    margin-bottom: 5px;
+}
+
+.submenu li a:hover {
+    text-decoration: none;
+}
+
+
+/*About Section*/
+.about-section {
+    padding: 10px 0;
+    border-top: solid;
+    border-color: var(--light-purple);
+}
+
+.about-section .section-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image .images {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+.social-link-list .social-link {  
+    font-size: 30px;
+    color: var(--blue);
+}
+
+/*Contact Section*/
+
+.contact-section {
+    padding: 10px 0;
+    border-top: solid;
+    border-color: var(--light-purple);
+}
+
+.contact-section .section-content {
+    display: block;
+    justify-content: space-between;
+}
+
+.contact-section .contact-desc {
+    align-items: center;
+    text-align: justify;
+}
+
+/*Grade-Selector*/
+.section-content .icon {
+    max-width: 100px;
+    height: 80px;
+    width: 160px;
+}
+
+.grade-selector .type-desc {
+    font-size: var(--font-size-s);
+}
+
+/*Responsive media*/
+@media screen and (max-width: 900px){
+    :root {
+    --font-size-m: 1rem;
+    --font-size-l: 1.3rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 1.8rem;
+    }
+
+    .navbar :where(#close-menu, #open-menu) {
+        display: block;
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #close-menu {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        color: var(--blue);
+    }
+
+    .navbar #open-menu {
+        display: block;
+        color: var(--blue);
+    }
+
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        background: var(--light-blue);
+        transition: left 0.6s ease-in;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--blue);
+        display: block;
+        margin-top: 20px;
+        font-size: var(--font-size-l);
+    }
+}
