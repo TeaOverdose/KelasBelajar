@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --white-color: #fff;
+    --dark-color: #252525;
+    --light-blue: #BFECFF;
+    --light-purple: #CDC1FF;
+    --skintone: #FFF6E3;
+    --light-pink: #FFCCEA;
+    --blue: #1865f2;
+    --dark-purple : #3B1E54;
+
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.15rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --border-radius-s: 10px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    --site-max-width: 1300px;
+}
+
+ul {
+    list-style: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 50px;
+    max-width: var(--site-max-width);
+}
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    font-size: var(--font-size-xl);
+}
+
+.section-desc {
+    text-align: justify;
+}
+
+/*Header*/
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    border-bottom: solid;
+    border-color: var(--light-purple);
+    background: var(--white-color);
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text{
+    color: var(--dark-color);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 20px;
+    color: var(--blue);
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.4s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: var(--blue);
+    background: var(--light-purple);
+}
+
+/*Hero Section*/
+.hero-section {
+    min-height: 400px;
+    background: var(--white-color);
+}
+
+.hero-section .section-content {
+    position: relative;
+    top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-section .hero-details .title {
+    font-size: var(--font-size-l);
+    color: var(--dark-purple);
+    font-family: "Miniver", sans-serif;
+}
+
+.hero-section .hero-details .description {
+    max-width: 70%;
+    margin: 25px 0 40px;
+    color: var(--dark-purple);
+    font-size: var(--font-size-m);
+}
+
+.hero-section .hero-details .buttons {
+    display: flex;
+}
+
+.hero-section .hero-details .buttons {
+    padding: 10px 25px;
+    width: 170px;
+    height: 50px;
+    text-align: center;
+    border: 2px solid transparent;
+    color: var(--blue);
+    border-radius: var(--border-radius-m);
+    background: var(--light-purple);
+    font-weight: var(--font-weight-medium);
+    transition: 0.4s ease;
+}
+
+.hero-section .hero-details .buttons:hover {
+    color: var(--light-pink);
+    border-color: var(--light-blue);
+    background: transparent;
+}
+
+.hero-section .hero-image {
+    max-width: 500px;
+    margin-right: 300px;
+}
+
+.navbar #open-menu,
+.navbar #close-menu {
+    display: none;
+}
+
+/*About Section*/
+.about-section {
+    padding: 10px 0;
+    border-top: solid;
+    border-color: var(--light-purple);
+}
+
+.about-section .section-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image .images {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+.social-link-list .social-link {  
+    font-size: 30px;
+    color: var(--blue);
+}
+
+/*Responsive media*/
+@media screen and (max-width: 900px){
+    :root {
+    --font-size-m: 1rem;
+    --font-size-l: 1.3rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 1.8rem;
+    }
+
+    .navbar :where(#close-menu, #open-menu) {
+        display: block;
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #close-menu {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        color: var(--blue);
+    }
+
+    .navbar #open-menu {
+        display: block;
+        color: var(--blue);
+    }
+
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        background: var(--light-blue);
+        transition: left 0.6s ease-in;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--blue);
+        display: block;
+        margin-top: 20px;
+        font-size: var(--font-size-l);
+    }}
+
+/* main*/
+/* kelas 1*/
+.menu-kelas1 {
+  position: sticky;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
+}
+
+/* Button styling */
+.menu-button1 {
+  width: 100%; /* Make button full width */
+  text-align: left; /* Align text to the left */
+  font-size: 20px; /* Font size for button text */
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+
+.isi-menu-kelas1{
+  position:relative; /* Absolute to avoid affecting layout */
+
+  top: 100%; /* Position below the button */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+}
+.isi-menu-kelas1 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+}
+.isi-menu-kelas1 a:hover{
+  background-color: #eee;
+  }
+
+
+/* kelas 2*/
+.menu-kelas2 {
+  position: relative;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
+}
+
+/* Button styling */
+.menu-button2 {
+  width: 100%; /* Make button full width */
+  text-align: left; /* Align text to the left */
+  font-size: 20px; /* Font size for button text */
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;}
+
+.isi-menu-kelas2{
+  position: relative; /* Absolute to avoid affecting layout */
+  top: 100%; /* Position below the button */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+}
+.isi-menu-kelas2 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.isi-menu-kelas2 a:hover{
+background-color: #eee;
+}
+
+
+/* kelas 3*/
+.menu-kelas3 {
+  position: relative;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
+}
+
+/* Button styling */
+.menu-button3 {
+  width: 100%; /* Make button full width */
+  text-align: left; /* Align text to the left */
+  font-size: 20px; /* Font size for button text */
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  
+}
+
+.isi-menu-kelas3{
+  position: relative; /* Absolute to avoid affecting layout */
+  top: 100%; /* Position below the button */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+}
+.isi-menu-kelas3 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+}
+.isi-menu-kelas3 a:hover{
+  background-color: #eee;
+  }
+
+/*kelas 4*/
+.menu-kelas4 {
+  position: relative;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
+}
+
+/* Button styling */
+.menu-button4 {
+  width: 100%; /* Make button full width */
+  text-align: left; /* Align text to the left */
+  font-size: 20px; /* Font size for button text */
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.isi-menu-kelas4{
+  position: relative; /* Absolute to avoid affecting layout */
+  top: 100%; /* Position below the button */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+
+}
+.isi-menu-kelas4 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+}
+.isi-menu-kelas4 a:hover{
+  background-color: #eee;
+  }
+
+  /*kelas 5*/
+.menu-kelas5 {
+  position: relative;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
+}
+
+/* Button styling */
+.menu-button5 {
+  width: 100%; /* Make button full width */
+  text-align: left;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.isi-menu-kelas5{
+  position: relative; /* Absolute to avoid affecting layout */
+  top: 100%; /* Position below the button */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+
+}
+
+.isi-menu-kelas5 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+}
+.isi-menu-kelas5 a:hover{
+  background-color: #eee;
+  }
+
+  /*kelas 6*/
+.menu-kelas6 {
+  position: relative;
+  border-bottom: 1px solid #ddd; /* Separator between menus */
+  padding: 10px; /* Spacing around each menu item */
+
+}
+
+/* Button styling */
+.menu-button6 {
+  width: 100%; /* Make button full width */
+  text-align: left;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.isi-menu-kelas6{
+  max-height: 500px; /* Initially collapsed */
+  transition: max-height 0.4s ease; /* Smooth expansion */
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);}
+
+.isi-menu-kelas6 a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.isi-menu-kelas6 a:hover{
+  background-color: #eee;
+  }
+
+  /* garis batas bawah untuk menu kelas*/
+  .batas-bawah {
+    position: relative;
+    display: inline-block;
+    width: 100vh;
+    height: 6vh;
+
+  
+  }
+
+  .judul{
+      position: absolute;
+    top: 10vh;
+    left: 5vh;
+  padding: 50px;
+  }
+
+  .rotate {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+  }
+
+
+  
+  .icontoggle i {
+    transition: transform 0.3s ease;
+  }
+
